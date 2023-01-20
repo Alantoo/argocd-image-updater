@@ -15,7 +15,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            ghcr.io/ticketgenieio/${{ github.event.repository.name }}
+            ghcr.io/alantoo/${{ github.event.repository.name }}
           tags: |
             type=sha
             type=raw,enable={{is_default_branch}},value=latest
