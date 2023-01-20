@@ -159,7 +159,7 @@ func (clt *registryClient) ManifestForTag(tagStr string) (distribution.Manifest,
 	if err != nil {
 		return nil, err
 	}
-	mediaType := []string{ocischema.SchemaVersion.MediaType, schema1.MediaTypeSignedManifest, schema2.SchemaVersion.MediaType, manifestlist.SchemaVersion.MediaType}
+	mediaType := []string{ocischema.SchemaVersion.MediaType, "application/vnd.oci.image.index.v1+json", schema1.MediaTypeSignedManifest, schema2.SchemaVersion.MediaType, manifestlist.SchemaVersion.MediaType}
 	manifest, err := manService.Get(
 		context.Background(),
 		digest.FromString(tagStr),
